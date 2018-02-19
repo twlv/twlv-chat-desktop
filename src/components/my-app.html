@@ -1,0 +1,41 @@
+<xin-lazy-view-middleware></xin-lazy-view-middleware>
+<my-auth-middleware></my-auth-middleware>
+
+<div class="window">
+  <!-- Your app's content goes inside .window-content -->
+  <div class="window-content">
+    <div class="pane-group">
+      <div id="sideBar" class="pane pane-sm sidebar">
+        <ul class="list-group">
+          <li class="list-group-header" style="text-align: center">
+            <a href="#!/profile">[[chat.identity.address]]</a>
+          </li>
+          <li class="list-group-header">
+            <input class="form-control" type="text" placeholder="Search for someone">
+          </li>
+          <li class="list-group-item">
+            <img class="img-circle media-object pull-left" src="/assets/img/avatar.jpg" width="32" height="32">
+            <div class="media-body">
+              <strong>List item title</strong>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <img class="img-circle media-object pull-left" src="/assets/img/avatar2.png" width="32" height="32">
+            <div class="media-body">
+              <strong>List item title</strong>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <xin-pager class="pane ui-layout ui-layout--v ui-flex">
+        <my-home lazy-view uri="/"></my-home>
+        <my-auth lazy-view uri="/auth"></my-auth>
+        <my-profile lazy-view uri="/profile"></my-profile>
+        <my-test lazy-view uri="/test"></my-test>
+      </xin-pager>
+    </div>
+  </div>
+</div>
